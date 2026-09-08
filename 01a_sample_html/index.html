@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acme Widgets - Home</title>
+
+    <!-- Each of these is a SEPARATE request the browser makes after the HTML:
+         the stylesheet, the icon, the script, and the <img> below. Watch them
+         appear in DevTools → Network. -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="logo.svg" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="" width="32" height="32" />
+        Acme Widgets
+      </a> 
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Quality widgets since 1952</h1>
+      <p>The finest sprockets, cogs, and flanges, delivered to your door.</p>
+
+      <!-- A FORM. method="get" puts the field values into the URL as a query
+           string (?q=...) and requests the action page. That works with any
+           static server, including `python -m http.server`. -->
+      <section class="card">
+        <h2>Find a widget</h2>
+        <form action="results.html" method="get">
+          <label for="q">Search our catalogue</label>
+          <input type="text" id="q" name="q" placeholder="e.g. sprocket" />
+          <button type="submit">Search</button>
+        </form>
+        <p class="hint">
+          Submit it and watch the URL change to <code>results.html?q=…</code> -
+          the data rides in the <strong>URL</strong>.
+        </p>
+      </section>
+
+      <!-- A POST form. method="post" sends the field values in the request
+           BODY, not the URL. A plain `python -m http.server` can't handle that
+           (it returns 501); run `python3 server.py` instead to see it work. -->
+      <section class="card">
+        <h2>Sign the guestbook (POST)</h2>
+        <form action="/feedback" method="post">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Ada Lovelace" />
+          <label for="message">Message</label>
+          <input type="text" id="message" name="message" placeholder="Hello, web!" />
+          <button type="submit">Send</button>
+        </form>
+        <p class="hint">
+          This data rides in the request <strong>body</strong>, so it needs a
+          server that does something with it - run <code>python3 server.py</code>.
+        </p>
+      </section>
+
+      <!-- A button wired up in JavaScript: structure (HTML), look (CSS),
+           behaviour (JS) - the three languages, in one page. -->
+      <section class="card">
+        <h2>Behaviour</h2>
+        <button id="surprise" type="button">Surprise me</button>
+        <p id="message" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">A teaching demo for CSCI 3230U · Lecture 01a</footer>
+  </body>
+</html>

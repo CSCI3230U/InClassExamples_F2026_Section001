@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acme Widgets - Search results</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="logo.svg" />
+    <script src="results.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="" width="32" height="32" />
+        Acme Widgets
+      </a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Search results</h1>
+
+      <!-- The server sent this same page no matter what was searched. The
+           query lives in the URL; the JavaScript below reads it and fills
+           this in. (A real site would do the search on the server.) -->
+      <p id="summary">…</p>
+      <ul id="results"></ul>
+
+      <p><a href="index.html">← Back to search</a></p>
+    </main>
+
+    <footer class="site-footer">A teaching demo for CSCI 3230U · Lecture 01a</footer>
+  </body>
+</html>

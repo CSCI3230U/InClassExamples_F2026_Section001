@@ -1,0 +1,76 @@
+/* A little styling so the "this is a separate CSS request" point is visible
+   in the Network tab - and so the page doesn't look like 1994. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  color: #1f2430;
+  line-height: 1.5;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #1f2933;
+  color: #fff;
+}
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+.site-header nav { display: flex; gap: 1.25rem; margin-left: auto; }
+.site-header nav a { color: #cfe3ff; text-decoration: none; }
+.site-header nav a:hover { color: #fff; text-decoration: underline; }
+
+main { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+h1 { margin-top: 0; }
+
+.card {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #d8dee9;
+  border-radius: 10px;
+  background: #f7f9fc;
+}
+.card h2 { margin-top: 0; font-size: 1.15rem; }
+
+label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+input[type="text"] {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #b9c2d0;
+  border-radius: 6px;
+  min-width: 16rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover { background: #2257c4; }
+
+.hint { color: #5b6472; font-size: 0.9rem; }
+code { background: #eef1f6; padding: 0.1rem 0.35rem; border-radius: 4px; }
+
+#results li { margin: 0.25rem 0; }
+
+.site-footer {
+  margin-top: 3rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e3e8ef;
+  color: #6b7280;
+  font-size: 0.85rem;
+  text-align: center;
+}
