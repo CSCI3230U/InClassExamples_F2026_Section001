@@ -1,0 +1,15 @@
+:root {
+    --bg: #fdf6e3;
+    --ink: #1f2933;
+    --accent: #b8431d;
+    --space: 1rem;    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
