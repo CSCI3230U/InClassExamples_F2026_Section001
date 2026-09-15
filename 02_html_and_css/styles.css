@@ -13,3 +13,69 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+main {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: calc(var(--space) * 1.5);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space);
+    flex-wrap: wrap;
+    padding: var(--space);
+}
+
+nav {
+    display: flex;
+    gap: var(--space);
+}
+
+.booklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: var(--space);
+}
+
+.booklist img {
+    width: 15rem;
+} 
+
+.booklist article {
+    padding: var(--space);
+    background: #fff;
+    border: 1px solid #e7dcc4;
+    border-radius: 10px;
+}
+
+form {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 30rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e7dcc4;
+    border-radius: 6px;    
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e7dcc4;
+    border-radius: 6px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
