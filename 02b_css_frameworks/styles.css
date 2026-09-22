@@ -1,8 +1,7 @@
 :root {
-    --bg: #B5D8CC;
-    --highlight: #A9C7C0;
-    --ink: black;
-    --accent: #8A7090;
+    --bg: #fdf6e3;
+    --ink: #1f2933;
+    --accent: #b8431d;
     --space: 1rem;    
 }
 
@@ -13,8 +12,6 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
 }
 
 main {
@@ -39,17 +36,6 @@ header > h1 {
 nav {
     display: flex;
     gap: var(--space);
-}
-
-nav a {
-    padding: 1rem;
-    text-decoration: none;
-    color: var(--ink);
-}
-
-nav a:hover {
-    text-decoration: underline;
-    background: var(--highlight);
 }
 
 .booklist {
