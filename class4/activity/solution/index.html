@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookshelf</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- FIX 1: `defer` = download in parallel, run AFTER the HTML is parsed.
+       Without it this script runs while <body> is still empty, so it counts 0
+       books. The code never changed - only WHEN it ran. -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Bookshelf</h1>
+    <nav>
+      <ul>
+        <li><a href="#add">Add a book</a></li>
+        <li><a href="#list">My shelf</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="add">
+      <h2>Add a book</h2>
+      <form>
+        <label for="title">Title</label>
+        <input id="title" name="title" required>
+
+        <label for="author">Author</label>
+        <input id="author" name="author">
+
+        <label for="status">Status</label>
+        <select id="status" name="status">
+          <option value="want">Want to read</option>
+          <option value="reading">Reading</option>
+          <option value="finished">Finished</option>
+        </select>
+
+        <button type="submit">Add to shelf</button>
+      </form>
+    </section>
+
+    <section id="list">
+      <h2>My shelf</h2>
+      <!-- These three books are hard-coded HTML. Today they are just something
+           for JavaScript to COUNT. In 04b we delete them and draw this list
+           from the data in script.js instead. -->
+      <ul>
+        <li>
+          <article class="book">
+            <img src="covers/pragmatic.svg" alt="Cover of The Pragmatic Programmer">
+            <h3>The Pragmatic Programmer</h3>
+            <p>David Thomas &amp; Andrew Hunt</p>
+            <p class="status">Reading</p>
+          </article>
+        </li>
+        <li>
+          <article class="book">
+            <img src="covers/krug.svg" alt="Cover of Don't Make Me Think">
+            <h3>Don't Make Me Think</h3>
+            <p>Steve Krug</p>
+            <p class="status">Finished</p>
+          </article>
+        </li>
+        <li>
+          <article class="book">
+            <img src="covers/eloquent.svg" alt="Cover of Eloquent JavaScript">
+            <h3>Eloquent JavaScript</h3>
+            <p>Marijn Haverbeke</p>
+            <p class="status">Want to read</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>CSCI 3230U &middot; Lecture 03a activity - solution</p>
+  </footer>
+</body>
+</html>
